@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 // ES6 Promises
 mongoose.Promise = global.Promise;
 
+// Make Mongoose use `findOneAndUpdate()`. Note that this option is `true`
+// by default, you need to set it to false.
+mongoose.set('useFindAndModify', false);
+
 // Connect to DB before tests run
 before(function(done){
     // Connect to Mongodb
