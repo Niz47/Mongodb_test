@@ -3,12 +3,12 @@ const Schema = mongoose.Schema;
 
 // Create Scheme and Model
 
-const UserSchema = new Schema({
+const StudentSchema = new Schema({
     name: String,
     weight: Number
 });
 
-const User = mongoose.model('user', UserSchema);
+const Student = mongoose.model('student', StudentSchema);
 
-module.exports = User;
+module.exports = Student;
 
