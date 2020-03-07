@@ -16,4 +16,10 @@ before(function(done){
     });
 });
 
-
+// Drop all students collection before each test
+beforeEach(function(done){
+    // Drop the collections (***students need to be plural***)
+    mongoose.connection.collections.students.drop(function(){
+        done();
+    });
+});
